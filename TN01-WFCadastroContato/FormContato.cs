@@ -29,6 +29,17 @@ namespace TN01_WFCadastroContato
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public void LimparFormulario()
+        {
+            txtNome.Clear();
+            txtSobrenome.Clear();
+            mtbTelefone.Clear();
+            txtEmail.Clear();
+            rdbComercial.Checked = false;
+            rdbPessoal.Checked = false;
+            rdbRecado.Checked = false;
+        }
+
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
@@ -74,7 +85,7 @@ namespace TN01_WFCadastroContato
 
             }
 
-            //Jeito 1 (Retirando as marcaras do maskedtextbox)
+            //Jeito 1 (Retirando as máscaras do maskedtextbox)
             string dddtelefone =
                 "(" + mtbTelefone.Text.Substring(0, 2) + ")"
                 + mtbTelefone.Text.Substring(2, 5) + "-"
@@ -86,15 +97,19 @@ namespace TN01_WFCadastroContato
             c1.Email = txtEmail.Text;
             c1.Codigo = 0;
             c1.TipoTelefone = tipoTelefone;
+            c1.Ddd = mtbTelefone.Text.Substring(0, 2);
+            c1.Telefone = mtbTelefone.Text.Substring(2);
 
+            Contato.ListaContatos.Add(c1);
 
-            string mensagem = @$"
+            /*string mensagem = @$"
             Nome: {txtNome.Text} {txtSobrenome}
             Tipo de telefone: {tipoTelefone}
             DDD/Telefone {dddtelefone}
-            Email: {txtEmail}";
+            Email: {txtEmail}";?*/
 
-            Sucesso(mensagem);
+            Sucesso("Cadastrado com sucesso!");
+            LimparFormulario();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

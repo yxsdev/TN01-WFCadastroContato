@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvListaContatos = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvListaContatos).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListaContatos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(653, 426);
-            dataGridView1.TabIndex = 0;
+            dgvListaContatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListaContatos.Location = new Point(12, 12);
+            dgvListaContatos.Name = "dgvListaContatos";
+            dgvListaContatos.Size = new Size(653, 426);
+            dgvListaContatos.TabIndex = 0;
             // 
             // FormListagem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(677, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvListaContatos);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormListagem";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Listagem de Contato";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FormListagem_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvListaContatos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvListaContatos;
     }
 }
