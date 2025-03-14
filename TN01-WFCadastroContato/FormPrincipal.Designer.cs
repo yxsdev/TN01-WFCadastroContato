@@ -43,17 +43,16 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsSobre, mnsSair });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(690, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "Menu Principal";
-            menuStrip1.ItemClicked += this.menuStrip1_ItemClicked;
             // 
             // mnsCadastrar
             // 
             mnsCadastrar.Name = "mnsCadastrar";
             mnsCadastrar.Size = new Size(69, 20);
             mnsCadastrar.Text = "Cadastrar";
-            mnsCadastrar.Click += this.mnsCadastrar_Click;
+            mnsCadastrar.Click += mnsCadastrar_Click;
             // 
             // mnsSobre
             // 
@@ -66,7 +65,7 @@
             mnsSair.Name = "mnsSair";
             mnsSair.Size = new Size(38, 20);
             mnsSair.Text = "Sair";
-            mnsSair.Click += this.mnsSair_Click;
+            mnsSair.Click += mnsSair_Click;
             // 
             // picMenu
             // 
@@ -74,7 +73,7 @@
             picMenu.Image = (Image)resources.GetObject("picMenu.Image");
             picMenu.Location = new Point(0, 24);
             picMenu.Name = "picMenu";
-            picMenu.Size = new Size(800, 426);
+            picMenu.Size = new Size(690, 426);
             picMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             picMenu.TabIndex = 1;
             picMenu.TabStop = false;
@@ -83,7 +82,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(690, 450);
             Controls.Add(picMenu);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -92,7 +91,7 @@
             MinimizeBox = false;
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Cadastro";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picMenu).EndInit();

@@ -19,13 +19,13 @@ namespace TN01_WFCadastroContato
 
         public void Erro(string mensagem)
         {
-            MessageBox.Show(mensagem, "Error", 
+            MessageBox.Show(mensagem, "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void Sucesso(string mensagem)
         {
-            MessageBox.Show(mensagem, "Sucesso", 
+            MessageBox.Show(mensagem, "Sucesso",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -41,7 +41,7 @@ namespace TN01_WFCadastroContato
                 Erro("Campo Nome não pode estar vazio!");
                 return;
             }
-            else if(string.IsNullOrEmpty(txtSobrenome.Text))
+            else if (string.IsNullOrEmpty(txtSobrenome.Text))
             {
                 Erro("Campo Sobrenome não pode estar vazio!");
                 return;
@@ -57,7 +57,7 @@ namespace TN01_WFCadastroContato
                 return;
             }
 
-            string tipoTelefone = "";
+            ETipoTelefone tipoTelefone;
             if (!rdbComercial.Checked && !rdbPessoal.Checked && !rdbRecado.Checked)
             {
                 Erro("Deve-se marcar uma opção do tipo de telefone!");
@@ -66,19 +66,27 @@ namespace TN01_WFCadastroContato
             else
             {
                 if (rdbComercial.Checked)
-                    tipoTelefone = "Comercial";
+                    tipoTelefone = ETipoTelefone.Comercial;
                 else if (rdbPessoal.Checked)
-                    tipoTelefone = "Pessoal";
-                else 
-                    tipoTelefone = "Recado";
+                    tipoTelefone = ETipoTelefone.Pessoal;
+                else
+                    tipoTelefone = ETipoTelefone.Recado;
 
             }
 
             //Jeito 1 (Retirando as marcaras do maskedtextbox)
-            string dddtelefone = 
-                "(" + mtbTelefone.Text.Substring(0, 2) + ")" 
-                + mtbTelefone.Text.Substring(2, 5) + "-" 
+            string dddtelefone =
+                "(" + mtbTelefone.Text.Substring(0, 2) + ")"
+                + mtbTelefone.Text.Substring(2, 5) + "-"
                 + mtbTelefone.Text.Substring(7);
+
+            Contato c1 = new Contato();
+            c1.Nome = txtNome.Text;
+            c1.Sobrenome = txtSobrenome.Text;
+            c1.Email = txtEmail.Text;
+            c1.Codigo = 0;
+            c1.TipoTelefone = tipoTelefone;
+
 
             string mensagem = @$"
             Nome: {txtNome.Text} {txtSobrenome}
@@ -87,6 +95,11 @@ namespace TN01_WFCadastroContato
             Email: {txtEmail}";
 
             Sucesso(mensagem);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

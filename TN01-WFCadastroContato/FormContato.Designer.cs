@@ -123,7 +123,7 @@
             // rdbPessoal
             // 
             rdbPessoal.AutoSize = true;
-            rdbPessoal.Location = new Point(126, 21);
+            rdbPessoal.Location = new Point(7, 20);
             rdbPessoal.Name = "rdbPessoal";
             rdbPessoal.Size = new Size(64, 19);
             rdbPessoal.TabIndex = 1;
@@ -134,7 +134,7 @@
             // rdbComercial
             // 
             rdbComercial.AutoSize = true;
-            rdbComercial.Location = new Point(15, 20);
+            rdbComercial.Location = new Point(105, 19);
             rdbComercial.Name = "rdbComercial";
             rdbComercial.Size = new Size(79, 19);
             rdbComercial.TabIndex = 0;
@@ -161,6 +161,7 @@
             btnVoltar.Text = "Voltar";
             btnVoltar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // btnSalvar
             // 
