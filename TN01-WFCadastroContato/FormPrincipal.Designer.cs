@@ -44,9 +44,9 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsSobre, mnsListagem, mnsSair });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(690, 24);
+            menuStrip1.Size = new Size(573, 24);
             menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "Menu Principal";
+            menuStrip1.Text = "menuStrip1";
             // 
             // mnsCadastrar
             // 
@@ -60,6 +60,7 @@
             mnsSobre.Name = "mnsSobre";
             mnsSobre.Size = new Size(49, 20);
             mnsSobre.Text = "Sobre";
+            mnsSobre.Click += mnsSobre_Click;
             // 
             // mnsSair
             // 
@@ -74,7 +75,7 @@
             picMenu.Image = (Image)resources.GetObject("picMenu.Image");
             picMenu.Location = new Point(0, 24);
             picMenu.Name = "picMenu";
-            picMenu.Size = new Size(690, 426);
+            picMenu.Size = new Size(573, 366);
             picMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             picMenu.TabIndex = 1;
             picMenu.TabStop = false;
@@ -90,7 +91,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(690, 450);
+            ClientSize = new Size(573, 390);
             Controls.Add(picMenu);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -99,7 +100,7 @@
             MinimizeBox = false;
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Cadastro";
+            Text = "Menu Principal";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picMenu).EndInit();

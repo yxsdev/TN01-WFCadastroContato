@@ -31,27 +31,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContato));
             lblNome = new Label();
             txtNome = new TextBox();
-            lblLinha = new Label();
             txtSobrenome = new TextBox();
-            lblSobrenome = new Label();
-            lblTelefone = new Label();
+            lblSobreNome = new Label();
+            mtbDddTelefone = new MaskedTextBox();
+            lblLinha = new Label();
+            lblDddTelefone = new Label();
+            lblLinha2 = new Label();
             gbxTipoTelefone = new GroupBox();
             rdbRecado = new RadioButton();
             rdbPessoal = new RadioButton();
             rdbComercial = new RadioButton();
-            label2 = new Label();
-            btnVoltar = new Button();
-            btnSalvar = new Button();
             txtEmail = new TextBox();
             lblEmail = new Label();
-            mtbTelefone = new MaskedTextBox();
+            btnVoltar = new Button();
+            btnSalvar = new Button();
             gbxTipoTelefone.SuspendLayout();
             SuspendLayout();
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(50, 47);
+            lblNome.Location = new Point(27, 27);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(43, 15);
             lblNome.TabIndex = 0;
@@ -59,60 +59,76 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(50, 65);
+            txtNome.Location = new Point(32, 50);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(216, 23);
+            txtNome.Size = new Size(238, 23);
             txtNome.TabIndex = 1;
+            // 
+            // txtSobrenome
+            // 
+            txtSobrenome.Location = new Point(304, 50);
+            txtSobrenome.Name = "txtSobrenome";
+            txtSobrenome.Size = new Size(266, 23);
+            txtSobrenome.TabIndex = 3;
+            // 
+            // lblSobreNome
+            // 
+            lblSobreNome.AutoSize = true;
+            lblSobreNome.Location = new Point(304, 27);
+            lblSobreNome.Name = "lblSobreNome";
+            lblSobreNome.Size = new Size(71, 15);
+            lblSobreNome.TabIndex = 2;
+            lblSobreNome.Text = "Sobrenome:";
+            // 
+            // mtbDddTelefone
+            // 
+            mtbDddTelefone.Location = new Point(31, 150);
+            mtbDddTelefone.Mask = "(99) 00000-0000";
+            mtbDddTelefone.Name = "mtbDddTelefone";
+            mtbDddTelefone.Size = new Size(239, 23);
+            mtbDddTelefone.TabIndex = 4;
             // 
             // lblLinha
             // 
             lblLinha.BorderStyle = BorderStyle.Fixed3D;
-            lblLinha.Location = new Point(50, 107);
+            lblLinha.Location = new Point(33, 91);
             lblLinha.Name = "lblLinha";
-            lblLinha.Size = new Size(550, 1);
-            lblLinha.TabIndex = 2;
+            lblLinha.Size = new Size(537, 1);
+            lblLinha.TabIndex = 5;
             // 
-            // txtSobrenome
+            // lblDddTelefone
             // 
-            txtSobrenome.Location = new Point(291, 65);
-            txtSobrenome.Name = "txtSobrenome";
-            txtSobrenome.Size = new Size(309, 23);
-            txtSobrenome.TabIndex = 4;
+            lblDddTelefone.AutoSize = true;
+            lblDddTelefone.Location = new Point(27, 132);
+            lblDddTelefone.Name = "lblDddTelefone";
+            lblDddTelefone.Size = new Size(83, 15);
+            lblDddTelefone.TabIndex = 6;
+            lblDddTelefone.Text = "DDD/Telefone:";
             // 
-            // lblSobrenome
+            // lblLinha2
             // 
-            lblSobrenome.AutoSize = true;
-            lblSobrenome.Location = new Point(291, 47);
-            lblSobrenome.Name = "lblSobrenome";
-            lblSobrenome.Size = new Size(71, 15);
-            lblSobrenome.TabIndex = 3;
-            lblSobrenome.Text = "Sobrenome:";
-            // 
-            // lblTelefone
-            // 
-            lblTelefone.AutoSize = true;
-            lblTelefone.Location = new Point(50, 124);
-            lblTelefone.Name = "lblTelefone";
-            lblTelefone.Size = new Size(83, 15);
-            lblTelefone.TabIndex = 5;
-            lblTelefone.Text = "DDD/Telefone:";
+            lblLinha2.BorderStyle = BorderStyle.Fixed3D;
+            lblLinha2.Location = new Point(32, 214);
+            lblLinha2.Name = "lblLinha2";
+            lblLinha2.Size = new Size(537, 1);
+            lblLinha2.TabIndex = 7;
             // 
             // gbxTipoTelefone
             // 
             gbxTipoTelefone.Controls.Add(rdbRecado);
             gbxTipoTelefone.Controls.Add(rdbPessoal);
             gbxTipoTelefone.Controls.Add(rdbComercial);
-            gbxTipoTelefone.Location = new Point(291, 127);
+            gbxTipoTelefone.Location = new Point(334, 129);
             gbxTipoTelefone.Name = "gbxTipoTelefone";
-            gbxTipoTelefone.Size = new Size(309, 48);
-            gbxTipoTelefone.TabIndex = 7;
+            gbxTipoTelefone.Size = new Size(236, 55);
+            gbxTipoTelefone.TabIndex = 8;
             gbxTipoTelefone.TabStop = false;
-            gbxTipoTelefone.Text = "Tipo telefone";
+            gbxTipoTelefone.Text = "Tipo Telefone";
             // 
             // rdbRecado
             // 
             rdbRecado.AutoSize = true;
-            rdbRecado.Location = new Point(217, 20);
+            rdbRecado.Location = new Point(164, 22);
             rdbRecado.Name = "rdbRecado";
             rdbRecado.Size = new Size(64, 19);
             rdbRecado.TabIndex = 2;
@@ -123,7 +139,7 @@
             // rdbPessoal
             // 
             rdbPessoal.AutoSize = true;
-            rdbPessoal.Location = new Point(7, 20);
+            rdbPessoal.Location = new Point(94, 22);
             rdbPessoal.Name = "rdbPessoal";
             rdbPessoal.Size = new Size(64, 19);
             rdbPessoal.TabIndex = 1;
@@ -134,7 +150,7 @@
             // rdbComercial
             // 
             rdbComercial.AutoSize = true;
-            rdbComercial.Location = new Point(105, 19);
+            rdbComercial.Location = new Point(9, 22);
             rdbComercial.Name = "rdbComercial";
             rdbComercial.Size = new Size(79, 19);
             rdbComercial.TabIndex = 0;
@@ -142,22 +158,29 @@
             rdbComercial.Text = "Comercial";
             rdbComercial.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // txtEmail
             // 
-            label2.BorderStyle = BorderStyle.Fixed3D;
-            label2.Location = new Point(50, 205);
-            label2.Name = "label2";
-            label2.Size = new Size(550, 1);
-            label2.TabIndex = 8;
+            txtEmail.Location = new Point(33, 263);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(537, 23);
+            txtEmail.TabIndex = 10;
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(27, 240);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(44, 15);
+            lblEmail.TabIndex = 9;
+            lblEmail.Text = "E-mail:";
             // 
             // btnVoltar
             // 
             btnVoltar.Image = (Image)resources.GetObject("btnVoltar.Image");
-            btnVoltar.ImageAlign = ContentAlignment.MiddleRight;
-            btnVoltar.Location = new Point(395, 320);
+            btnVoltar.Location = new Point(395, 328);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(105, 42);
-            btnVoltar.TabIndex = 9;
+            btnVoltar.Size = new Size(79, 44);
+            btnVoltar.TabIndex = 11;
             btnVoltar.Text = "Voltar";
             btnVoltar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVoltar.UseVisualStyleBackColor = true;
@@ -166,63 +189,39 @@
             // btnSalvar
             // 
             btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
-            btnSalvar.ImageAlign = ContentAlignment.MiddleRight;
-            btnSalvar.Location = new Point(508, 320);
+            btnSalvar.Location = new Point(489, 328);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(108, 42);
-            btnSalvar.TabIndex = 10;
+            btnSalvar.Size = new Size(80, 44);
+            btnSalvar.TabIndex = 12;
             btnSalvar.Text = "Salvar";
             btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(50, 249);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(550, 23);
-            txtEmail.TabIndex = 12;
-            // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(50, 231);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(44, 15);
-            lblEmail.TabIndex = 11;
-            lblEmail.Text = "E-mail:";
-            // 
-            // mtbTelefone
-            // 
-            mtbTelefone.Location = new Point(50, 147);
-            mtbTelefone.Mask = "(99) 00000-0000";
-            mtbTelefone.Name = "mtbTelefone";
-            mtbTelefone.Size = new Size(216, 23);
-            mtbTelefone.TabIndex = 13;
-            mtbTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            mtbTelefone.MaskInputRejected += maskedTextBox1_MaskInputRejected;
-            // 
             // FormContato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(662, 388);
-            Controls.Add(mtbTelefone);
-            Controls.Add(txtEmail);
-            Controls.Add(lblEmail);
+            ClientSize = new Size(586, 389);
             Controls.Add(btnSalvar);
             Controls.Add(btnVoltar);
-            Controls.Add(label2);
+            Controls.Add(txtEmail);
+            Controls.Add(lblEmail);
             Controls.Add(gbxTipoTelefone);
-            Controls.Add(lblTelefone);
-            Controls.Add(txtSobrenome);
-            Controls.Add(lblSobrenome);
+            Controls.Add(lblLinha2);
+            Controls.Add(lblDddTelefone);
             Controls.Add(lblLinha);
+            Controls.Add(mtbDddTelefone);
+            Controls.Add(txtSobrenome);
+            Controls.Add(lblSobreNome);
             Controls.Add(txtNome);
             Controls.Add(lblNome);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormContato";
-            Text = "FormContato";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cadastrar Contato";
             gbxTipoTelefone.ResumeLayout(false);
             gbxTipoTelefone.PerformLayout();
             ResumeLayout(false);
@@ -233,19 +232,19 @@
 
         private Label lblNome;
         private TextBox txtNome;
-        private Label lblLinha;
         private TextBox txtSobrenome;
-        private Label lblSobrenome;
-        private Label lblTelefone;
+        private Label lblSobreNome;
+        private MaskedTextBox mtbDddTelefone;
+        private Label lblLinha;
+        private Label lblDddTelefone;
+        private Label lblLinha2;
         private GroupBox gbxTipoTelefone;
         private RadioButton rdbRecado;
         private RadioButton rdbPessoal;
         private RadioButton rdbComercial;
-        private Label label2;
-        private Button btnVoltar;
-        private Button btnSalvar;
         private TextBox txtEmail;
         private Label lblEmail;
-        private MaskedTextBox mtbTelefone;
+        private Button btnVoltar;
+        private Button btnSalvar;
     }
 }
