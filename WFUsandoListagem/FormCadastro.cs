@@ -52,13 +52,23 @@ namespace WFUsandoListagem
                 return;
             }
 
+            if (txtSenha.Text != txtConfirmarSenha.Text)
+            {
+                Erro("Senhas não conferem!");
+                return;
+            }
+
             Usuario us1 = new Usuario();
             us1.Codigo = 0;
             us1.Login = txtLogin.Text;
             us1.Senha = txtSenha.Text;
             us1.ConfirmarSenha = txtConfirmarSenha.Text;
+            us1.DataCadastro = DateTime.Now;
 
             Usuario.ListaUsuarios.Add(us1);
+
+            FormListagem frmListagem = new FormListagem();
+            frmListagem.ShowDialog();
 
             Sucesso("Cadastrado com Sucesso!");
 
