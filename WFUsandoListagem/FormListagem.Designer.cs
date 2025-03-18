@@ -1,4 +1,4 @@
-﻿namespace TN01_WFCadastroContato
+﻿namespace WFUsandoListagem
 {
     partial class FormListagem
     {
@@ -28,38 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvListaContatos = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvListaContatos).BeginInit();
+            dgvListagem = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvListagem).BeginInit();
             SuspendLayout();
             // 
-            // dgvListaContatos
+            // dgvListagem
             // 
-            dgvListaContatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvListaContatos.Location = new Point(8, 18);
-            dgvListaContatos.Name = "dgvListaContatos";
-            dgvListaContatos.Size = new Size(592, 214);
-            dgvListaContatos.TabIndex = 0;
-            dgvListaContatos.CellContentClick += dgvListaContatos_CellContentClick;
+            dgvListagem.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListagem.Location = new Point(12, 12);
+            dgvListagem.Name = "dgvListagem";
+            dgvListagem.Size = new Size(701, 349);
+            dgvListagem.TabIndex = 1;
             // 
             // FormListagem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(608, 239);
-            Controls.Add(dgvListaContatos);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            ClientSize = new Size(727, 373);
+            Controls.Add(dgvListagem);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormListagem";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Listagem de Contatos";
+            Text = "FormListagem";
             Load += FormListagem_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvListaContatos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvListagem).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dgvListaContatos;
+        private DataGridView dgvListagem;
     }
 }
