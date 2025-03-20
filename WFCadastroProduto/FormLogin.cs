@@ -26,30 +26,34 @@ namespace WFCadastroProduto
             us.Senha = "123456";
             us.DataCadastro = Convert.ToDateTime("18/03/2025");
             us.HoraCadastro = new TimeOnly(18, 30, 00);
+
+            /*us.DataCadastro = DateTime.Parse("18/03/2025 18:30")*/
+
             Usuario.ListaUsuarios.Add(us);
         }
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
-            foreach (Usuario user in Usuario.ListaUsuarios)
+            foreach (Usuario us in Usuario.ListaUsuarios)
             {
-                if (user.Login == txtLogin.Text)
+                if ((us.Login == txtLogin.Text) && (us.Senha == txtSenha.Text))
                 {
-                    if (user.Senha == txtSenha.Text)
-                    {
-                        MessageBox.Show(
+                    MessageBox.Show(
                             "Usuario Autenticado com Sucesso!",
                             "Sucesso!", MessageBoxButtons.OK,
                             MessageBoxIcon.Information
                             );
-                        FormMenu Main = new FormMenu();
-                        Main.Show();
-                        return;
-                    }
-                }
+                    FormMenu Main = new FormMenu();
+                    Main.Show();
 
+                    txtLogin.Clear();
+                    txtSenha.Clear();
+
+                    return;
+                }
             }
 
+            txtSenha.Clear();
             MessageBox.Show("Usuario Não Autenticado!",
                             "Erro!", MessageBoxButtons.OK,
                             MessageBoxIcon.Error);

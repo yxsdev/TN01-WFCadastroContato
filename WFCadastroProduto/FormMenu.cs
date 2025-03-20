@@ -15,7 +15,14 @@ namespace WFCadastroProduto
 
         private void mnsSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resposta = 
+                MessageBox.Show("Deseja realmente sair?", "Sair", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resposta == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void mnsListar_Click(object sender, EventArgs e)

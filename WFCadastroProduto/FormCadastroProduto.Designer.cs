@@ -73,6 +73,8 @@
             // 
             // nudPreco
             // 
+            nudPreco.DecimalPlaces = 2;
+            nudPreco.Increment = new decimal(new int[] { 50, 0, 0, 0 });
             nudPreco.Location = new Point(69, 204);
             nudPreco.Name = "nudPreco";
             nudPreco.Size = new Size(120, 23);
@@ -127,6 +129,7 @@
             dtpDataVencimento.Name = "dtpDataVencimento";
             dtpDataVencimento.Size = new Size(200, 23);
             dtpDataVencimento.TabIndex = 9;
+            dtpDataVencimento.Value = new DateTime(2025, 3, 19, 21, 34, 29, 0);
             // 
             // lblObservacao
             // 
@@ -182,6 +185,7 @@
             Name = "FormCadastroProduto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Produto";
+            Load += FormCadastroProduto_Load;
             ((System.ComponentModel.ISupportInitialize)nudPreco).EndInit();
             ResumeLayout(false);
             PerformLayout();

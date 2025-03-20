@@ -19,5 +19,9 @@ namespace WFCadastroProduto
         public static
             List<Produto> ListaProduto = new List<Produto>();
 
+        private void Cadastrar()
+        {
+            ListaProduto.Add(this);
+        }
     }
 }

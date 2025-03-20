@@ -34,8 +34,49 @@ namespace WFCadastroProduto
             txtObservacao.Clear();
             nudPreco.Value = 0;
             cmbCategoria.SelectedIndex = -1;
-            dtpDataVencimento.Value = DateTime.Now;
+            dtpDataVencimento.Value = DateTime.Today;
         }
+        /*
+        public bool CamposNaoPreenchidos()
+        {
+            if(string.IsNullOrEmpty(txtCodigo.Text) 
+                return true;
+            if(string.IsNullOrEmpty(txtNomeProduto.Text))
+                return true;
+            if(cbxCategoria.SelectedIndex == -1)
+                return true;
+            if(nudPreco.Value == 0)
+                return true;
+            if(dtpDataVencimento.Value == DateTime.Today)
+                return true;
+
+            return false;
+        } 
+
+        dentro do botão salvar
+        {
+            if(CamposNaoPreenchidos())
+            {
+                Erro("Preencha todos os campos!");
+                return;
+            }
+            else
+            {
+            Produto p1 = new Produto();
+            p1.Codigo = Convert.ToInt32(txtCodigo.Text);
+            p1.NomeProduto = txtNomeProduto.Text;
+            p1.Observacao = txtObservacao.Text;
+            p1.Preco = Convert.ToDouble(nudPreco.Value);
+            p1.Categoria = Convert.ToString(cmbCategoria.SelectedItem);
+            p1.DataVencimento = dtpDataVencimento.Value;
+            Produto.ListaProduto.Add(p1);
+            FormListaProduto formListaProduto = new FormListaProduto();
+            formListaProduto.Show();
+            Sucesso("Cadastrado com Sucesso!");
+            LimparFormulario();
+            }
+        }
+        */
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -92,6 +133,11 @@ namespace WFCadastroProduto
                 // Se a tecla pressionada não for um número ou Backspace, bloqueia a digitação
                 e.Handled = true;
             }
+        }
+
+        private void FormCadastroProduto_Load(object sender, EventArgs e)
+        {
+            dtpDataVencimento.Value = DateTime.Today;
         }
     }
 }
